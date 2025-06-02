@@ -1,83 +1,71 @@
-%PDF-1.7
-
-1 0 obj
-  << >>
-endobj
-
-2 0 obj
-  << /Length 3 0 R >>
+%PDF-1.5
+%«Ïè¢
+%%Invocation: gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.5 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=? ?
+5 0 obj
+<</Length 6 0 R/Filter /FlateDecode>>
 stream
-/DeviceRGB CS
-/DeviceRGB cs
-q
-1.000000 0.000000 -0.000000 1.000000 0.000000 0.000000 cm
-0.431373 0.207843 0.243137 scn
-0.000000 842.000000 m
-595.000000 842.000000 l
-595.000000 0.000000 l
-0.000000 0.000000 l
-0.000000 842.000000 l
-h
-f
-n
-Q
-q
-1.000000 0.000000 -0.000000 1.000000 0.000000 0.000000 cm
-0.877083 0.800339 0.800339 scn
-0.000000 42.000000 m
-595.000000 42.000000 l
-595.000000 0.000000 l
-0.000000 0.000000 l
-0.000000 42.000000 l
-h
-f
-n
-Q
-
+xúuåªÄ0{O·	–À◊ŒÃÄ)`ˇAÉ,=üÆ∏É19Fª˛óJòbp°ds"960epn÷Ë¡ïRIù˜áåÌ~µòJ.)XCQ˜¬˚¥~R£4”ô!!”endstream
+endobj
+6 0 obj
+96
+endobj
+4 0 obj
+<</Type/Page/MediaBox [0 0 595 842]
+/Parent 3 0 R
+/Resources<</ProcSet[/PDF]
+>>
+/Contents 5 0 R
+>>
+endobj
+3 0 obj
+<< /Type /Pages /Kids [
+4 0 R
+] /Count 1
+>>
+endobj
+1 0 obj
+<</Type /Catalog /Pages 3 0 R
+/Metadata 7 0 R
+>>
+endobj
+7 0 obj
+<</Type/Metadata
+/Subtype/XML/Length 1172>>stream
+<?xpacket begin='Ôªø' id='W5M0MpCehiHzreSzNTczkc9d'?>
+<?adobe-xap-filters esc="CRLF"?>
+<x:xmpmeta xmlns:x='adobe:ns:meta/' x:xmptk='XMP toolkit 2.9.1-13, framework 1.6'>
+<rdf:RDF xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#' xmlns:iX='http://ns.adobe.com/iX/1.0/'>
+<rdf:Description rdf:about="" xmlns:pdf='http://ns.adobe.com/pdf/1.3/' pdf:Producer='GPL Ghostscript 9.55.0'/>
+<rdf:Description rdf:about="" xmlns:xmp='http://ns.adobe.com/xap/1.0/'><xmp:ModifyDate>2025-06-02T14:47:06Z</xmp:ModifyDate>
+<xmp:CreateDate>2025-06-02T14:47:06Z</xmp:CreateDate>
+<xmp:CreatorTool>UnknownApplication</xmp:CreatorTool></rdf:Description>
+<rdf:Description rdf:about="" xmlns:xapMM='http://ns.adobe.com/xap/1.0/mm/' xapMM:DocumentID='uuid:00d12c74-77dd-11fb-0000-3ae3a7ca185f'/>
+<rdf:Description rdf:about="" xmlns:dc='http://purl.org/dc/elements/1.1/' dc:format='application/pdf'><dc:title><rdf:Alt><rdf:li xml:lang='x-default'>Untitled</rdf:li></rdf:Alt></dc:title></rdf:Description>
+</rdf:RDF>
+</x:xmpmeta>
+                                                                        
+                                                                        
+<?xpacket end='w'?>
 endstream
 endobj
-
-3 0 obj
-  443
-endobj
-
-4 0 obj
-  << /Annots []
-     /Type /Page
-     /MediaBox [ 0.000000 0.000000 595.000000 842.000000 ]
-     /Resources 1 0 R
-     /Contents 2 0 R
-     /Parent 5 0 R
-  >>
-endobj
-
-5 0 obj
-  << /Kids [ 4 0 R ]
-     /Count 1
-     /Type /Pages
-  >>
-endobj
-
-6 0 obj
-  << /Pages 5 0 R
-     /Type /Catalog
-  >>
-endobj
-
+2 0 obj
+<</Producer(GPL Ghostscript 9.55.0)
+/CreationDate(D:20250602144706Z00'00')
+/ModDate(D:20250602144706Z00'00')>>endobj
 xref
-0 7
-0000000000 65535 f
-0000000010 00000 n
-0000000034 00000 n
-0000000533 00000 n
-0000000555 00000 n
-0000000730 00000 n
-0000000804 00000 n
+0 8
+0000000000 65535 f 
+0000000499 00000 n 
+0000001811 00000 n 
+0000000440 00000 n 
+0000000326 00000 n 
+0000000142 00000 n 
+0000000308 00000 n 
+0000000563 00000 n 
 trailer
-<< /ID [ (some) (id) ]
-   /Root 6 0 R
-   /Size 7
+<< /Size 8 /Root 1 0 R /Info 2 0 R
+/ID [<5380A9E14E0E9DFD91111A5AA52B7F4F><5380A9E14E0E9DFD91111A5AA52B7F4F>]
 >>
 startxref
-863
+1936
 %%EOF
