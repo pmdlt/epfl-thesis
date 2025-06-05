@@ -3,19 +3,15 @@
 \usepackage{newpxmath} % Use PX fonts for math (alternative to standard fonts).
 \usepackage{fvextra} % Enhanced customisation of verbatim environments.
 \usepackage{csquotes} % Context-sensitive quotation marks.
-\usepackage{fontspec} % Required for custom fonts with XeLaTeX or LuaLaTeX.
+
+% For pdfLaTeX compatibility - use traditional font packages instead of fontspec
+\usepackage{tgpagella} % TeX Gyre Pagella as main font (pdfLaTeX compatible)
+\usepackage{lato} % Lato font package for pdfLaTeX
+\usepackage{ebgaramond} % EB Garamond font package for pdfLaTeX
 
 \linespread{1.2} % Slightly increase line spacing.
-\setmainfont{TeX Gyre Pagella}[Ligatures=TeX,LetterSpace=0.7] % Set TeX Gyre Pagella as the main font.
 
-\newcommand{\latofont}{\fontspec{Lato}}
-\newcommand{\garamondfont}{\fontspec{EB Garamond}}
-\newcommand{\minionfont}{\fontspec[
-    Path = Configurations/Fonts/,
-    % UprightFont = Minion-Pro-Regular.ttf,
-    % UprightFont = Minion-Pro-Subhead.otf,
-    UprightFont = Minion-Pro-Display.otf,
-    BoldFont = Minion-Pro-Bold.ttf,
-    ItalicFont = Minion-Pro-Italic.ttf,
-    BoldItalicFont = Minion-Pro-Bold-Italic.ttf,
-]{Minion Pro}}
+% Font commands for pdfLaTeX compatibility
+\newcommand{\latofont}{\sffamily\lato} % Use Lato sans-serif font
+\newcommand{\garamondfont}{\ebgaramond} % Use EB Garamond font
+\newcommand{\minionfont}{\rmfamily} % Fallback to default serif font (or use a compatible alternative)
