@@ -3,27 +3,19 @@
 \usepackage{newpxmath} % Use PX fonts for math (alternative to standard fonts).
 \usepackage{fvextra} % Enhanced customisation of verbatim environments.
 \usepackage{csquotes} % Context-sensitive quotation marks.
+\usepackage{fontspec} % Required for custom fonts with XeLaTeX or LuaLaTeX.
 
-% Use fontspec only with XeLaTeX or LuaLaTeX
-\usepackage{iftex}
-\ifnum 0\ifXeTeX 1\fi\ifLuaTeX 1\fi>0
-    \usepackage{fontspec} % Required for custom fonts with XeLaTeX or LuaLaTeX.
-    \linespread{1.2} % Slightly increase line spacing.
-    \setmainfont{TeX Gyre Pagella}[Ligatures=TeX,LetterSpace=0.7] % Set TeX Gyre Pagella as the main font.
-    
-    \newcommand{\latofont}{\fontspec{Lato}}
-    \newcommand{\garamondfont}{\fontspec{EB Garamond}}
-    \newcommand{\minionfont}{\fontspec[
-        Path = Configurations/Fonts/,
-        UprightFont = Minion-Pro-Display.otf,
-        BoldFont = Minion-Pro-Bold.ttf,
-        ItalicFont = Minion-Pro-Italic.ttf,
-        BoldItalicFont = Minion-Pro-Bold-Italic.ttf,
-    ]{Minion Pro}}
-\else
-    % For pdfLaTeX, use standard fonts
-    \linespread{1.2} % Slightly increase line spacing.
-    \newcommand{\latofont}{\sffamily} % Use sans-serif as fallback
-    \newcommand{\garamondfont}{\rmfamily} % Use roman as fallback
-    \newcommand{\minionfont}{\rmfamily} % Use roman as fallback
-\fi
+\linespread{1.2} % Slightly increase line spacing.
+\setmainfont{TeX Gyre Pagella}[Ligatures=TeX,LetterSpace=0.7] % Set TeX Gyre Pagella as the main font.
+
+\newcommand{\latofont}{\fontspec{Lato}}
+\newcommand{\garamondfont}{\fontspec{EB Garamond}}
+\newcommand{\minionfont}{\fontspec[
+    Path = Configurations/Fonts/,
+    % UprightFont = Minion-Pro-Regular.ttf,
+    % UprightFont = Minion-Pro-Subhead.otf,
+    UprightFont = Minion-Pro-Display.otf,
+    BoldFont = Minion-Pro-Bold.ttf,
+    ItalicFont = Minion-Pro-Italic.ttf,
+    BoldItalicFont = Minion-Pro-Bold-Italic.ttf,
+]{Minion Pro}}
