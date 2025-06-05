@@ -1,43 +1,21 @@
 \ifthenelse{\equal{\CoverOption}{classic}}{
-    \ifthenelse{\equal{\SchoolOption}{epfl}}{
-        \newcommand\BackgroundPicCover{%
-        \put(0,0){%
-        \parbox[b][\paperheight]{\paperwidth}{%
-        \vfill
-        \centering
-        \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Figures/Theme/EPFL-Cover-BG.pdf}%
-        \vfill
-        }}}
-    }{
-        \newcommand\BackgroundPicCover{%
-        \put(0,0){%
-        \parbox[b][\paperheight]{\paperwidth}{%
-        \vfill
-        \centering
-        \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Figures/Theme/Cover-BG.pdf}%
-        \vfill
-        }}}
-    }
+    \newcommand\BackgroundPicCover{%
+    \put(0,0){%
+    \parbox[b][\paperheight]{\paperwidth}{%
+    \vfill
+    \centering
+    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Figures/Theme/Cover-BG.pdf}%
+    \vfill
+    }}}
 }{
-    \ifthenelse{\equal{\SchoolOption}{epfl}}{
-        \newcommand\BackgroundPicCover{%
-        \put(0,0){%
-        \parbox[b][\paperheight]{\paperwidth}{%
-        \vfill
-        \centering
-        \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Figures/Theme/EPFL-Front-Page-BG.pdf}%
-        \vfill
-        }}}
-    }{
-        \newcommand\BackgroundPicCover{%
-        \put(0,0){%
-        \parbox[b][\paperheight]{\paperwidth}{%
-        \vfill
-        \centering
-        \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Figures/Theme/Front-Page-BG.pdf}%
-        \vfill
-        }}}
-    }
+    \newcommand\BackgroundPicCover{%
+    \put(0,0){%
+    \parbox[b][\paperheight]{\paperwidth}{%
+    \vfill
+    \centering
+    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Figures/Theme/Front-Page-BG.pdf}%
+    \vfill
+    }}}
 }
 
 \AddToShipoutPictureBG*{\BackgroundPicCover}
@@ -78,12 +56,6 @@
                 \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/IPLeiria-ESECS-Logo-W.pdf}
             \end{figure}
         }{}
-        
-        \ifthenelse{\equal{\SchoolOption}{epfl}}{
-            \begin{figure}
-                \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/EPFL_Logo_Digital_WHITE_PROD.png}
-            \end{figure}
-        }{}
     } {
         \ifthenelse{\equal{\SchoolOption}{estg}}{
             \begin{figure}
@@ -112,12 +84,6 @@
         \ifthenelse{\equal{\SchoolOption}{esecs}}{
             \begin{figure}
                 \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/IPLeiria-ESECS-Logo-B.pdf}
-            \end{figure}
-        }{}
-        
-        \ifthenelse{\equal{\SchoolOption}{epfl}}{
-            \begin{figure}
-                \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/EPFL_Logo_Digital_BLACK_PROD.png}
             \end{figure}
         }{}
     }

@@ -1,22 +1,11 @@
-\ifthenelse{\equal{\SchoolOption}{epfl}}{
-    \newcommand\BackgroundPicFrontPage{%
-        \put(0,0){%
-        \parbox[b][\paperheight]{\paperwidth}{%
-        \vfill
-        \centering
-        \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Figures/Theme/EPFL-Front-Page-BG.pdf}%
-        \vfill
-    }}}
-}{
-    \newcommand\BackgroundPicFrontPage{%
-        \put(0,0){%
-        \parbox[b][\paperheight]{\paperwidth}{%
-        \vfill
-        \centering
-        \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Figures/Theme/Front-Page-BG.pdf}%
-        \vfill
-    }}}
-}
+\newcommand\BackgroundPicFrontPage{%
+    \put(0,0){%
+    \parbox[b][\paperheight]{\paperwidth}{%
+    \vfill
+    \centering
+    \includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{Figures/Theme/Front-Page-BG.pdf}%
+    \vfill
+}}}
 \AddToShipoutPictureBG*{\BackgroundPicFrontPage}
 
 \newgeometry{margin=1.98cm, top=2.15cm, bottom=1.47cm}
@@ -52,12 +41,6 @@
     \ifthenelse{\equal{\SchoolOption}{esecs}}{
         \begin{figure}
             \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/IPLeiria-ESECS-Logo-B.pdf}
-        \end{figure}
-    }
-    
-    \ifthenelse{\equal{\SchoolOption}{epfl}}{
-        \begin{figure}
-            \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/EPFL_Logo_Digital_BLACK_PROD.png}
         \end{figure}
     }
 
