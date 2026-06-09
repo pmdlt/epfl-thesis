@@ -1,0 +1,81 @@
+%%% EPFL Brand Elements %%%
+% Reusable identity elements derived from the EPFL brand guidelines
+% (corp-id.epfl.ch). See Configurations/01-Colors.sty for the palette.
+
+% The red square. Its proportions follow the arm of the Swiss cross:
+% 1/6th wider than high (7:6), the same construction as the openings of
+% the letters 'E' and 'F' in the EPFL logo. Optional argument = height.
+\NewDocumentCommand{\epflsquare}{O{0.54em} O{epflrouge}}{%
+    \textcolor{#2}{\rule[0.02em]{\dimexpr#1*7/6\relax}{#1}}%
+}
+
+% Brand architecture: an organizational unit reference. Always separated
+% from the EPFL logo, always accompanied by the red square, and always
+% smaller than the logo itself.
+\NewDocumentCommand{\epflunit}{m}{%
+    \mbox{\epflsquare\hspace{0.45em}{\geistmedium\small #1}}%
+}
+
+% A color swatch used to present the corporate palette.
+\NewDocumentCommand{\epflswatch}{m}{%
+    \raisebox{-0.2em}{\textcolor{#1}{\rule{1.1em}{0.9em}}}%
+}
+
+% A pixel-styled display heading accent (Geist Pixel Square by default).
+\NewDocumentCommand{\epflpixel}{O{\pixelfont} m}{{#1 #2}}
+
+% Branded callout box: white surface, generous spacing, red square marker.
+% The guidelines ask to balance colors with generous white space, so the
+% box stays mostly white with a single Groseille accent.
+% Abstract cover graphic: isometric container fleet with one unit lifted out.
+% #1 = ink color; #2 = intensity (1 = cover, lower = lighter B\&W watermark).
+\NewDocumentCommand{\CoverAbstractGraphic}{O{white} O{1}}{%
+    \pgfmathsetmacro{\covergraphicintensity}{#2}
+    \begin{tikzpicture}[remember picture, overlay]
+        \begin{scope}[color=#1,
+                      shift={(current page.south east)},
+                      xshift=-5.4cm, yshift=9.4cm, scale=3.0]
+            \foreach \i/\j in {0/0, 1/0, 0/1, 2/0, 0/2, 2/1, 1/2, 2/2} {
+                \pgfmathsetmacro{\f}{0.55 + 0.3*abs(sin(31*\i + 57*\j + 7))}
+                \begin{scope}[shift={({0.78*(\i-\j)}, {-0.45*(\i+\j)})},
+                              scale around={0.92:(0,-0.9)}]
+                    \fill[opacity={0.80*\f*\covergraphicintensity}]
+                        (0,0) -- (0.78,-0.45) -- (0,-0.9) -- (-0.78,-0.45) -- cycle;
+                    \fill[opacity={0.38*\f*\covergraphicintensity}]
+                        (-0.78,-0.45) -- (0,-0.9) -- (0,-1.8) -- (-0.78,-1.35) -- cycle;
+                    \fill[opacity={0.16*\f*\covergraphicintensity}]
+                        (0.78,-0.45) -- (0,-0.9) -- (0,-1.8) -- (0.78,-1.35) -- cycle;
+                \end{scope}
+            }
+            \draw[dashed, line width={0.7pt*\covergraphicintensity}, opacity={0.55*\covergraphicintensity}]
+                (0,-0.9) -- (0.78,-1.35) -- (0,-1.8) -- (-0.78,-1.35) -- cycle;
+            \draw[dashed, line width={0.7pt*\covergraphicintensity}, opacity={0.45*\covergraphicintensity}]
+                (0,-0.85) -- (0,-0.38);
+            \begin{scope}[shift={(0, 2.4)}, shift={(0,-0.9)},
+                          scale around={0.92:(0,-0.9)}]
+                \fill[opacity={0.95*\covergraphicintensity}]
+                    (0,0) -- (0.78,-0.45) -- (0,-0.9) -- (-0.78,-0.45) -- cycle;
+                \fill[opacity={0.50*\covergraphicintensity}]
+                    (-0.78,-0.45) -- (0,-0.9) -- (0,-1.8) -- (-0.78,-1.35) -- cycle;
+                \fill[opacity={0.24*\covergraphicintensity}]
+                    (0.78,-0.45) -- (0,-0.9) -- (0,-1.8) -- (0.78,-1.35) -- cycle;
+            \end{scope}
+        \end{scope}
+    \end{tikzpicture}%
+}
+
+\newtcolorbox{epflbox}[2][]{%
+    enhanced jigsaw,
+    colback=white,
+    colframe=epflperle!60!white,
+    boxrule=.4pt,
+    sharp corners,
+    borderline west={1.1mm}{0pt}{epflgroseille},
+    fonttitle=\geistmedium,
+    coltitle=epfltaupe,
+    detach title,
+    top=4mm, bottom=4mm, left=4mm, right=4mm,
+    before upper={\hbox{\epflsquare[0.5em][epflgroseille]\hspace{0.45em}\tcbtitle}\par\medskip},
+    title={#2},
+    #1
+}

@@ -1,8 +1,9 @@
 %%% Chapters and Sections %%%
 \ifthenelse{\equal{\ChapterOption}{classic}}{
+    % Chapter numeral set in Geist Pixel (decorative display use).
     \titleformat{\chapter}[display]%
     {\raggedleft\huge}%
-    {\raggedleft\fontsize{98}{10}\bfseries{\color{chapterdarkred}{\thechapter}}}%
+    {\raggedleft\pixelfont\fontsize{92}{10}\selectfont{\color{chapterdarkred}{\thechapter}}}%
     {0pt}%
     {\hspace{3cm}\minionfont\fontsize{28}{30}\selectfont}%
 }{}
@@ -19,7 +20,7 @@
 \ifthenelse{\equal{\ChapterOption}{modern}}{
     \titleformat{\chapter}[display]
     {\normalsize\huge\color{black}}%
-    {\minionfont\flushright\fontsize{84}{10}\bfseries%
+    {\geistpixelgrid\flushright\fontsize{84}{10}\selectfont%
     {\color{chaptergray}\raisebox{5pt}{\thechapter}}%
     }{10pt}%
     {\minionfont\addfontfeature{LetterSpace=6}\fontsize{28}{32}\MakeUppercase}%

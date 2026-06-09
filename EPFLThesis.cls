@@ -172,7 +172,6 @@
 \RequirePackage{soul} % A better underline.
 \RequirePackage{mfirstuc} % Capitalise words in a sentence.
 \RequirePackage{tikz} % Create high-quality graphics programmatically.
-\RequirePackage{psvectorian} % To include in-text ornamatentions. 
 \RequirePackage{blindtext} % Generate placeholder text.
 
 \tcbuselibrary{most} % Load most libraries from the tcolorbox package.
@@ -191,3 +190,4 @@
 \usepackage{Configurations/09-Code}
 \usepackage{Configurations/10-Macros}
 \usepackage{Configurations/11-Metadata}
+\usepackage{Configurations/12-Brand}

@@ -8,6 +8,9 @@ DOCUMENT=EPFLMain.tex
 SHELL=/bin/bash
 TOOL=latexmk
 
+# BasicTeX/MacTeX on macOS — ensure TeX bin tools are on PATH for sub-makes.
+export PATH := /Library/TeX/texbin:$(PATH)
+
 all:
 	@$(MAKE) check-minted
 	@$(MAKE) build

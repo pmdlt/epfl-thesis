@@ -204,3 +204,69 @@ Within this template, some custom commands are also available for your use. For 
 \end{block}
 \end{tcbraster}
 \vspace{.875em}
+
+\section{EPFL Brand Identity}
+\label{sec:brand-identity}
+This template follows the EPFL brand guidelines (\href{https://corp-id.epfl.ch}{corp-id.epfl.ch}) wherever a thesis document allows it. This section documents how the guidelines are applied and presents the reusable brand elements that ship with the template.
+
+\subsection{Corporate Colors}
+\label{sec:brand-colors}
+The guidelines state that, when using colors, you must always choose the values of the official palette, and always balance colors with generous white space. The six corporate colors are predefined in the template (see \texttt{Configurations/01-Colors.sty}) and can be used anywhere with \verb|\textcolor{epflrouge}{...}| or any other \texttt{xcolor} command. \autoref{tab:epfl-colors} lists the palette with the official print and digital values.
+
+\begin{table}[!htpb]
+    \setlength{\extrarowheight}{2.5pt}
+    \caption[EPFL corporate color palette]{The EPFL corporate color palette and its official values.}
+    \label{tab:epfl-colors}
+    \begin{tabularx}{\textwidth}{clllX}
+        \toprule
+        & \textbf{Name} & \textbf{Hex} & \textbf{Pantone / RAL} & \textbf{Macro} \\
+        \midrule
+        \epflswatch{epflrouge}     & Rouge     & \texttt{\#FF0000} & 485 C / 3020     & \texttt{epflrouge} \\
+        \epflswatch{epflgroseille} & Groseille & \texttt{\#B51F1F} & 3546 CP / 3000   & \texttt{epflgroseille} \\
+        \epflswatch{epfltaupe}     & Taupe     & \texttt{\#413D3A} & 405 CP / 8019    & \texttt{epfltaupe} \\
+        \epflswatch{epflcanard}    & Canard    & \texttt{\#007480} & 7714 CP / 5025   & \texttt{epflcanard} \\
+        \epflswatch{epflleman}     & Léman     & \texttt{\#00A79F} & 3272 CP / 5018   & \texttt{epflleman} \\
+        \epflswatch{epflperle}     & Perle     & \texttt{\#CAC7C7} & 406 C / 7047     & \texttt{epflperle} \\
+        \bottomrule
+    \end{tabularx}
+\end{table}
+
+\subsection{Logo and Brand Architecture}
+The EPFL logo always features on the top left side of documents, in Swiss red, primarily on clear backgrounds and images. The logo should remain red as much as possible, even on dark backgrounds; the white version on a red background is reserved for secondary uses. This template honours these rules on the cover, front page, and back page.
+
+The openings of the letters ``E'' and ``F'' in the logo come from the proportions of the ends of the arm of the Swiss cross: one sixth wider than high. The same construction is available as the \verb|\epflsquare| element (\epflsquare), which the guidelines pair with organizational unit references. Unit references must always be separated from the EPFL logo, accompanied by the red square, and set smaller than the logo. Use \verb|\epflunit{...}| to typeset one:
+
+\begin{center}
+    \epflunit{School of Computer and Communication Sciences}
+\end{center}
+
+A branded callout box built on these elements is also available through the \texttt{epflbox} environment:
+
+\begin{epflbox}{Branded callout}
+    A white surface with a single Groseille accent and the red square marker, in line with the guideline to balance colors with generous white space.
+\end{epflbox}
+
+\subsection{Typography}
+\label{sec:brand-typography}
+EPFL's official corporate font is \textit{Suisse Int'l} (with Arial as the authorised alternative on office materials). As Suisse Int'l is commercially licensed, this template instead adopts \href{https://vercel.com/font}{Geist}, an open-source (SIL OFL 1.1) sans-serif family in the same Swiss typographic tradition. Three members of the family are used, each where pertinent:
+
+\begin{description}
+    \item[Geist Sans] The main document font, used for body text, headings, and the cover pages. {\geistlight Light}, Regular, {\geistmedium Medium}, {\geistsemibold SemiBold}, and \textbf{Bold} weights are available through \verb|\geistlight|, \verb|\geistmedium|, and \verb|\geistsemibold|.
+    \item[Geist Mono] Used automatically for all monospaced material: \texttt{file paths}, \verb|inline verbatim|, and code listings rendered with \texttt{minted}.
+    \item[Geist Pixel] A decorative display family used for the chapter numerals. It comes in five variants, available as font commands:
+\end{description}
+
+\begin{center}
+    \setlength{\tabcolsep}{12pt}
+    \begin{tabular}{ll}
+        {\geistpixelsquare\large EPFL 2026}   & \verb|\geistpixelsquare| \\
+        {\geistpixelgrid\large EPFL 2026}     & \verb|\geistpixelgrid| \\
+        {\geistpixelcircle\large EPFL 2026}   & \verb|\geistpixelcircle| \\
+        {\geistpixeltriangle\large EPFL 2026} & \verb|\geistpixeltriangle| \\
+        {\geistpixelline\large EPFL 2026}     & \verb|\geistpixelline| \\
+    \end{tabular}
+\end{center}
+
+\begin{block}[warning]
+Geist Pixel is a display typeface: keep it for headlines, numerals, and accents. Never set body text in it, and never use it where the guidelines require the corporate font.
+\end{block}

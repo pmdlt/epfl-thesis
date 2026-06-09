@@ -3,22 +3,32 @@
 % Main document color; used mainly in citation links.
 \colorlet{maincolor}{\ColorOption}
 
-% EPFL brand colors
-\definecolor{epflred}{HTML}{FF0000}
-\definecolor{epflgray}{HTML}{373A36}
-\definecolor{epfllightgray}{HTML}{E5E5E5}
+%%% EPFL Corporate Colors %%%
+% Official palette from the EPFL brand guidelines (corp-id.epfl.ch).
+% When using colors, always choose the values listed here.
+\definecolor{epflrouge}{HTML}{FF0000}     % Rouge     - Pantone 485 C  / RAL 3020
+\definecolor{epflgroseille}{HTML}{B51F1F} % Groseille - Pantone 3546 CP / RAL 3000
+\definecolor{epfltaupe}{HTML}{413D3A}     % Taupe     - Pantone 405 CP / RAL 8019
+\definecolor{epflcanard}{HTML}{007480}    % Canard    - Pantone 7714 CP / RAL 5025
+\definecolor{epflleman}{HTML}{00A79F}     % Léman     - Pantone 3272 CP / RAL 5018
+\definecolor{epflperle}{HTML}{CAC7C7}     % Perle     - Pantone 406 C  / RAL 7047
+
+% Convenience aliases used throughout the template.
+\colorlet{epflred}{epflrouge}
+\colorlet{epflgray}{epfltaupe}
+\colorlet{epfllightgray}{epflperle!40!white}
 
 % Color used in the numeration of the chapter style 'classic'.
-\colorlet{chapterdarkred}{epflred!80!black}
+\colorlet{chapterdarkred}{epflgroseille}
 
 % Color used in the numeration of the chapter style 'modern'.
-\colorlet{chaptergray}{epflgray!60!white}
+\colorlet{chaptergray}{epfltaupe!60!white}
 
 % Color used in the typesetting of the front page.
 \definecolor{frontpagedark}{HTML}{1c1c1c}
 
-% Colors used in the custom block environment.
-\definecolor{note}{HTML}{0969da}
-\definecolor{tip}{HTML}{1a7f37}
+% Colors used in the custom block environment (mapped to the EPFL palette).
+\colorlet{note}{epflcanard}
+\colorlet{tip}{epflleman!80!black}
 \definecolor{warning}{HTML}{9a6700}
-\definecolor{todo}{HTML}{d1242f}
+\colorlet{todo}{epflgroseille}

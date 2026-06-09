@@ -1,17 +1,94 @@
 %%% Fonts %%%
-\usepackage[T1]{fontenc} % Font encoding for extended character sets.
+% The document is typeset with the Geist font family (https://vercel.com/font),
+% released by Vercel under the SIL Open Font License 1.1:
+%   - Geist (Sans) ..... body text, headings, cover pages.
+%   - Geist Mono ....... code listings, verbatim, file paths.
+%   - Geist Pixel ...... decorative display use (chapter numerals, accents).
+%
+% Note on brand alignment: EPFL's corporate font is Suisse Int'l (Arial as the
+% authorised alternative). Geist is used here as a deliberate typographic
+% choice; switch back to an authorised font for official EPFL communications.
+
+\usepackage[no-math]{fontspec} % XeLaTeX font loading ('no-math' keeps newpxmath in charge of math).
 \usepackage{newpxmath} % Use PX fonts for math (alternative to standard fonts).
 \usepackage{fvextra} % Enhanced customisation of verbatim environments.
 \usepackage{csquotes} % Context-sensitive quotation marks.
 
-% For pdfLaTeX compatibility - use traditional font packages instead of fontspec
-\usepackage{tgpagella} % TeX Gyre Pagella as main font (pdfLaTeX compatible)
-\usepackage{lato} % Lato font package for pdfLaTeX
-\usepackage{ebgaramond} % EB Garamond font package for pdfLaTeX
+\defaultfontfeatures{Ligatures=TeX}
+
+% Geist (Sans) as the main and sans-serif document font.
+\setmainfont{Geist}[
+    Path = Configurations/Fonts/Geist/,
+    Extension = .otf,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic
+]
+\setsansfont{Geist}[
+    Path = Configurations/Fonts/Geist/,
+    Extension = .otf,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic
+]
+
+% Geist Mono for all monospaced material (code, verbatim, minted).
+\setmonofont{GeistMono}[
+    Path = Configurations/Fonts/GeistMono/,
+    Extension = .otf,
+    UprightFont = *-Regular,
+    ItalicFont = *-Italic,
+    BoldFont = *-Bold,
+    BoldItalicFont = *-BoldItalic,
+    Scale = 0.92
+]
+
+% Additional Geist weights for display typography.
+\newfontfamily{\geistlight}{Geist}[
+    Path = Configurations/Fonts/Geist/,
+    Extension = .otf,
+    UprightFont = *-Light,
+    ItalicFont = *-LightItalic,
+    BoldFont = *-Medium,
+    BoldItalicFont = *-MediumItalic
+]
+\newfontfamily{\geistmedium}{Geist}[
+    Path = Configurations/Fonts/Geist/,
+    Extension = .otf,
+    UprightFont = *-Medium,
+    ItalicFont = *-MediumItalic,
+    BoldFont = *-SemiBold,
+    BoldItalicFont = *-SemiBoldItalic
+]
+\newfontfamily{\geistsemibold}{Geist}[
+    Path = Configurations/Fonts/Geist/,
+    Extension = .otf,
+    UprightFont = *-SemiBold,
+    ItalicFont = *-SemiBoldItalic,
+    BoldFont = *-Black,
+    BoldItalicFont = *-Black
+]
+
+% Geist Pixel display variants (single weight, decorative use only).
+\newfontfamily{\geistpixelsquare}{GeistPixel-Square}[
+    Path = Configurations/Fonts/GeistPixel/, Extension = .otf]
+\newfontfamily{\geistpixelgrid}{GeistPixel-Grid}[
+    Path = Configurations/Fonts/GeistPixel/, Extension = .otf]
+\newfontfamily{\geistpixelcircle}{GeistPixel-Circle}[
+    Path = Configurations/Fonts/GeistPixel/, Extension = .otf]
+\newfontfamily{\geistpixeltriangle}{GeistPixel-Triangle}[
+    Path = Configurations/Fonts/GeistPixel/, Extension = .otf]
+\newfontfamily{\geistpixelline}{GeistPixel-Line}[
+    Path = Configurations/Fonts/GeistPixel/, Extension = .otf]
+
+% Default pixel font used by the template's decorative elements.
+\newcommand{\pixelfont}{\geistpixelsquare}
 
 \linespread{1.2} % Slightly increase line spacing.
 
-% Font commands for pdfLaTeX compatibility
-\newcommand{\latofont}{\sffamily\lato} % Use Lato sans-serif font
-\newcommand{\garamondfont}{\ebgaramond} % Use EB Garamond font
-\newcommand{\minionfont}{\rmfamily} % Fallback to default serif font (or use a compatible alternative)
+% Legacy font command aliases (kept so existing matter files keep compiling).
+\newcommand{\latofont}{\sffamily} % Formerly Lato; now Geist Sans.
+\newcommand{\garamondfont}{\rmfamily} % Formerly EB Garamond; now Geist Sans.
+\newcommand{\minionfont}{\geistmedium} % Formerly Minion Pro; now Geist Medium.

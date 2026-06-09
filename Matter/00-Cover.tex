@@ -103,6 +103,10 @@
 	{\noindent\fontsize{10}{12}\selectfont\GetDate}
 
     \vspace{68pt}
+
+    \ifthenelse{\equal{\CoverOption}{classic}}{%
+        \CoverAbstractGraphic[white][1]}{%
+        \CoverAbstractGraphic[frontpagedark][0.22]}
 \end{titlepage}
 \restoregeometry
 \MediaOptionLogicBlank
