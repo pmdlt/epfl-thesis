@@ -1,6 +1,6 @@
 % Author Name: José Areia 
 % Author Contact: jose.apareia@gmail.com
-% Version: 2.2.7 - 2025-05-23
+% Version: 2.2.13 - 2026/01/06
 % Public Repository: https://github.com/joseareia/ipleiria-thesis
 % Wiki/Getting Help: https://github.com/joseareia/ipleiria-thesis/wiki
 
@@ -20,7 +20,7 @@
 
 \keys_define:nn { IPLeiriaThesis } {
     school .choices:nn =
-        { estg, esecs, esslei, esad, estm, epfl }
+        { estg, esecs, esslei, esad, estm, epfl, utnfrba }
         { \tl_gset:Nn \g_IPLeiriaThesis_myschool_tl { #1 } },
     school / unknown .code:n = 
         { \ClassWarningNoLine{IPLeiriaThesis}
@@ -37,7 +37,7 @@
     coverstyle .initial:n = { classic },
 
     language .choices:nn = 
-        { english, portuguese } 
+        { english, portuguese, spanish } 
         { \tl_gset:Nn \g_IPLeiriaThesis_mylanguage_tl { #1 } },
     language / unknown .code:n = 
         { \ClassWarningNoLine{IPLeiriaThesis}{Specified~'language'~not~available.~Defaulting~to~'english'} },
@@ -95,13 +95,21 @@
     bookprint .default:n = { false },
     bookprint .initial:n = { false },
 
-    aiack .choices:nn = 
+    aiacknowledgement .choices:nn = 
         { true, false } 
-        { \tl_gset:Nn \g_IPLeiriaThesis_aiack_tl { #1 } },
-    aiack / unknown .code:n = 
-        { \ClassWarningNoLine{IPLeiriaThesis}{Specified~'aiack'~not~available.~Defaulting~to~'true'} },
-    aiack .default:n = { true },
-    aiack .initial:n = { true },
+        { \tl_gset:Nn \g_IPLeiriaThesis_aiacknowledgement_tl { #1 } },
+    aiacknowledgement / unknown .code:n = 
+        { \ClassWarningNoLine{IPLeiriaThesis}{Specified~'aiacknowledgement'~not~available.~Defaulting~to~'true'} },
+    aiacknowledgement .default:n = { true },
+    aiacknowledgement .initial:n = { true },
+
+    listprefix .choices:nn = 
+        { true, false } 
+        { \tl_gset:Nn \g_IPLeiriaThesis_listprefix_tl { #1 } },
+    listprefix / unknown .code:n = 
+        { \ClassWarningNoLine{IPLeiriaThesis}{Specified~'listprefix'~not~available.~Defaulting~to~'false'} },
+    listprefix .default:n = { false },
+    listprefix .initial:n = { false },
     
     unknown .code:n = 
         { \ClassWarningNoLine{IPLeiriaThesis}{An~unknown~option~was~ignored.~Please~check~the~documentation~to~see~the~available~options} }
@@ -116,7 +124,8 @@
 \newcommand{\ColorOption}{\g_IPLeiriaThesis_linkcolor_tl}
 \newcommand{\DocTypeOption}{\g_IPLeiriaThesis_doctype_tl}
 \newcommand{\BookPrintOption}{\g_IPLeiriaThesis_bookprint_tl}
-\newcommand{\AiAckOption}{\g_IPLeiriaThesis_aiack_tl}
+\newcommand{\AiAckOption}{\g_IPLeiriaThesis_aiacknowledgement_tl}
+\newcommand{\ListPrefixOption}{\g_IPLeiriaThesis_listprefix_tl}
 
 \ProcessKeyOptions[IPLeiriaThesis]
 \ExplSyntaxOff
@@ -147,9 +156,9 @@
 \RequirePackage{titlesec} % Customisation of section and chapter titles.
 \RequirePackage{titling} % Control over title and titlepage formatting.
 \RequirePackage[toc,page]{appendix} % Formatting for appendices.
-\RequirePackage[acronym]{glossaries} % Create glossaries and acronyms.
-\RequirePackage[calc,datesep={/}]{datetime2} % Enhanced date and time formatting.
 \RequirePackage[bookmarks,pdfusetitle]{hyperref} % Hyperlinks and PDF metadata.
+\RequirePackage[symbols,acronym]{glossaries} % Create glossaries and acronyms.
+\RequirePackage[calc,datesep={/}]{datetime2} % Enhanced date and time formatting.
 \RequirePackage{xparse} % Advanced argument parsing for custom macros.
 \RequirePackage{typearea} % Page layout adjustments (KOMA-Script).
 \RequirePackage{eso-pic} % Adding elements to the page background.
