@@ -1,4 +1,18 @@
 % EPFL Thesis LaTeX Class
+% Copyright 2025-2026 Paul Madelénat (EPFL adaptations)
+%
+% Derived from IPLeiria Thesis by José Areia
+%   https://github.com/joseareia/ipleiria-thesis
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   https://www.latex-project.org/lppl.txt
+%
+% This derived work is maintained independently of the upstream template.
+% See NOTICE.md for change history and attribution.
+%
 % Repository: https://github.com/pmdlt/epfl-thesis
 % Version: 1.0.0 - 2026/06/09
 

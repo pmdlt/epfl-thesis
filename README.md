@@ -56,8 +56,8 @@ See the User Guide chapter in the compiled PDF for full documentation.
 
 ## License
 
-This project is released under the [LPPL 1.3c License](https://www.latex-project.org/lppl/lppl-1-3c/).
+This project is released under the [LPPL 1.3c License](https://www.latex-project.org/lppl/lppl-1-3c/). See [`LICENSE`](LICENSE) for the full text and [`NOTICE.md`](NOTICE.md) for upstream attribution and change history.
 
 ## Credits
 
-This template is based on [IPLeiria Thesis](https://github.com/joseareia/ipleiria-thesis) by [José Areia](https://github.com/joseareia), originally developed for the Polytechnic University of Leiria. The EPFL version adapts that template with EPFL branding and metadata defaults while preserving the underlying LaTeX architecture.
+This template is based on [IPLeiria Thesis](https://github.com/joseareia/ipleiria-thesis) by [José Areia](https://github.com/joseareia), originally developed for the Polytechnic University of Leiria. The EPFL version is an independent derived work with EPFL branding and metadata defaults. The upstream author does not maintain or support this fork.
