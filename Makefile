@@ -4,7 +4,7 @@
 # Reference Link: https://scaron.info/blog/makefiles-for-latex.html
 # Dependencies: ["rubber", "latexmk", "inotify-tools"]
 
-DOCUMENT=IPLeiriaMain.tex
+DOCUMENT=EPFLMain.tex
 SHELL=/bin/bash
 TOOL=latexmk
 
@@ -22,9 +22,9 @@ check-minted:
 	echo "Detected minted version: $$MINTED_VERSION"; \
 	MAJOR_VERSION=$$(echo $$MINTED_VERSION | cut -d. -f1); \
 	if [ "$$MAJOR_VERSION" -lt 3 ]; then \
-		echo "Version < 3.0.0, modifying IPLeiriaThesis.cls..."; \
-		sed -i.bak 's/\\RequirePackage\[newfloat\]{minted}/\\RequirePackage[newfloat,outputdir=.aux]{minted}/' IPLeiriaThesis.cls; \
-		echo "Modification complete. Backup saved as IPLeiriaThesis.cls.bak"; \
+		echo "Version < 3.0.0, modifying EPFLThesis.cls..."; \
+		sed -i.bak 's/\\RequirePackage\[newfloat\]{minted}/\\RequirePackage[newfloat,outputdir=.aux]{minted}/' EPFLThesis.cls; \
+		echo "Modification complete. Backup saved as EPFLThesis.cls.bak"; \
 	else \
 		echo "Version >= 3.0.0, no modification required."; \
 	fi

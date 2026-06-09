@@ -1,7 +1,7 @@
 \chapter[Comprehensive User Guide: Instructions for Using the Template]{Comprehensive User Guide Instructions for Using the Template}
 \label{cp:user-guide}
 
-If you plan to use this template, please read this chapter carefully. It provides all the information you need to effectively use the template, including the mandatory modifications (\textit{e.g.}, title, subtitle, author information) and other configurations that, while not highly recommended, are optional. The template comprises various directories and files, including a total of seven distinct directories and dozens of files. Among these, the most important are \texttt{IPLeiriaMain.tex} and \texttt{IPLeiriaThesis.cls}. Below, \autoref{tab:file-structure} presents the different directories available, along with their descriptions and a check-mark indicating whether you need to access the directory to make changes. Of course, the check mark indicates that you can make changes to the content, while a hyphen signifies that you should not modify it.
+If you plan to use this template, please read this chapter carefully. It provides all the information you need to effectively use the template, including the mandatory modifications (\textit{e.g.}, title, subtitle, author information) and other configurations that, while not highly recommended, are optional. The template comprises various directories and files, including a total of seven distinct directories and dozens of files. Among these, the most important are \texttt{EPFLMain.tex} and \texttt{EPFLThesis.cls}. Below, \autoref{tab:file-structure} presents the different directories available, along with their descriptions and a check-mark indicating whether you need to access the directory to make changes. Of course, the check mark indicates that you can make changes to the content, while a hyphen signifies that you should not modify it.
 
 \begin{table}[!htpb]
     \setlength{\extrarowheight}{2pt}
@@ -26,14 +26,14 @@ If you plan to use this template, please read this chapter carefully. It provide
 It is crucial to note that the files are organised according to a specific naming convention, which must be \textbf{respected} and \textbf{maintained}. The naming convention consists of an ascending two-digit numeric value, followed by a hyphen, and then the file name in capital letters. The name should always aim to be a single word. If more than one word is necessary, they should be separated by a hyphen and capitalised.
 
 \begin{block}[note]
-While \autoref{tab:file-structure} indicates that the \textit{Matter} directory is not modifiable, two files within that directory should be altered when necessary: \texttt{04-Glossary.tex} and \texttt{05-Acronyms.tex}. Although the names are fairly self-explanatory, these files should contain the glossary and acronyms entries, respectively.
+While \autoref{tab:file-structure} indicates that the \textit{Matter} directory is not modifiable, two files within that directory should be altered when necessary: \texttt{05-Glossary.tex} and \texttt{06-Acronyms.tex}. Although the names are fairly self-explanatory, these files should contain the glossary and acronyms entries, respectively.
 \end{block}
 
-The two files mentioned earlier, \texttt{IPLeiriaMain.tex} and \texttt{IPLeiriaThesis.cls}, should be used with caution. The main file, as the name suggests, is the master file where you will add the necessary chapters to be included in your work. The class file, on the other hand, requires even more caution, and it is not recommended to alter it.
+The two files mentioned earlier, \texttt{EPFLMain.tex} and \texttt{EPFLThesis.cls}, should be used with caution. The main file, as the name suggests, is the master file where you will add the necessary chapters to be included in your work. The class file, on the other hand, requires even more caution, and it is not recommended to alter it.
 
 \section{Template and Class Options}
 \label{sec:class-options}
-The first thing you need to do is specify the options within the \texttt{IPLeiriaMain.tex} file. How do you do that? It's simple. On the very first line, you will find a \texttt{documentclass} command that loads the custom class for this template. In this call, you can pass the options you need. The available options, presented in a key-argument style, are listed in \autoref{tab:template-options}.
+The first thing you need to do is specify the options within the \texttt{EPFLMain.tex} file. How do you do that? It's simple. At the top of the file, you will find a \texttt{documentclass} command that loads the custom class for this template. In this call, you can pass the options you need. The available options, presented in a key-argument style, are listed in \autoref{tab:template-options}.
 
 {
 \setlength{\extrarowheight}{-1.75pt}
@@ -62,21 +62,17 @@ The first thing you need to do is specify the options within the \texttt{IPLeiri
 \bottomrule
 \endlastfoot
 
-\textbf{school=OPT} & \textbf{Choosing a school and its corresponding logo.} \\
-\multirow[t]{2}{*}{\footnotesize{\textit{estg, esecs, esslei, esad, estm, utnfrba}}} & \footnotesize{\textit{$\Rightarrow$ Default: school=estg}} \\
-& \footnotesize{\textit{This option only modifies the school name and the corresponding logo, which will be displayed on the cover and front page.}} \\[1.70em]
-
 \textbf{language=OPT} & \textbf{Language preference selection.} \\
 \footnotesize{\textit{portuguese, english, spanish}} & \footnotesize{\textit{$\Rightarrow$ Default: language=english}} \\[0.85em]
         
-\textbf{chapterstyle=OPT} & \textbf{Selection of a cover design style.} \\
+\textbf{chapterstyle=OPT} & \textbf{Selection of a chapter design style.} \\
 \multirow[t]{2}{*}{\footnotesize{\textit{classic, modern, fancy}}} & \footnotesize{\textit{$\Rightarrow$ Default: chapterstyle=classic}} \\
 & \footnotesize{\textit{This option modifies the appearance of the chapter, including its title and numbering style. Explore the available styles and apply the one you prefer.}} \\[1.70em]
 
-\textbf{coverstyle=OPT} & \textbf{Choosing a style for the chapter.} \\
+\textbf{coverstyle=OPT} & \textbf{Choosing a style for the cover.} \\
 \multirow[t]{3}{*}{\footnotesize{\textit{classic, bw}}} & \footnotesize{\textit{$\Rightarrow$ Default: coverstyle=classic}} \\
-& \footnotesize{\textit{classic $\rightarrow$ Put the cover on in the original red.}} \\
-& \footnotesize{\textit{bw $\rightarrow$ Make the cover black and white.}} \\
+& \footnotesize{\textit{classic $\rightarrow$ EPFL cover with red gradient background.}} \\
+& \footnotesize{\textit{bw $\rightarrow$ Black and white cover variant.}} \\
 
 \textbf{docstage=OPT} & \textbf{Choosing a stage for you document.} \\
 \multirow[t]{3}{*}{\footnotesize{\textit{final, working}}} & \footnotesize{\textit{$\Rightarrow$ Default: docstage=final}} \\
@@ -110,7 +106,7 @@ After setting the desired options in the main class, you are all set to personal
 
 \section{Metadata Customisation}
 \label{sec:metadata}
-While options like language and school can be passed as arguments to the main class, other options, such as author and title, must be defined manually. Since this template supports a wide range of metadata options, a dedicated file is provided for this purpose. The file at \texttt{Metadata/Metadata.tex} lists metadata variables, with comments on whether they are mandatory. Comment out the variables to omit them. \autoref{tab:metadata} includes all metadata variables, their GET command, and if they are mandatory. The GET command automatically retrieves the information from the stored variable.
+While options like language can be passed as arguments to the main class, other options, such as author and title, must be defined manually. Since this template supports a wide range of metadata options, a dedicated file is provided for this purpose. The file at \texttt{Metadata/Metadata.tex} lists metadata variables, with comments on whether they are mandatory. Comment out the variables to omit them. \autoref{tab:metadata} includes all metadata variables, their GET command, and if they are mandatory. The GET command automatically retrieves the information from the stored variable.
 
 \begin{longtable}[c]{llc}
 \caption{Metadata variables within the template.}
@@ -171,7 +167,7 @@ Second co-supervisor e-mail                 & \verb|\GetSecCoSupervisorMail|  & 
 Second co-supervisor title and affiliation  & \verb|\GetSecCoSupervisorTitle| & - \\
 \end{longtable}
 
-If, by any chance, \textbf{you want to add more options}, please contact me by opening an issue in the official GitHub repository or via the email provided in this document.
+If you want to add more metadata options, open an issue in the \href{https://github.com/pmdlt/epfl-thesis}{GitHub repository}.
 
 \section{Custom Chapter Insertion}
 As stated before, to use this template, you need to do three things: set the appropriate options in the document class (see \autoref{sec:class-options}), update the document metadata (see \autoref{sec:metadata}), and create and import your custom chapters. To create and import a custom chapter, follow these steps: \(i\) create a TeX file in the Chapters directory that follows the predefined naming convention and \(ii)\) include it in the main file using the command \verb|\include{CHAPTER}|. And voilà, your first chapter is ready!
