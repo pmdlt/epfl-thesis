@@ -313,7 +313,7 @@ TSWLatexianTemp*
 
 ### Overleaf Bundle Script ###
 overleaf-bundle.sh
-ipleiria-thesis-overleaf-*.zip
+epfl-thesis-overleaf-*.zip
 
 ### macOS
 .DS_Store
