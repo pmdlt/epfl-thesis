@@ -28,6 +28,7 @@
     \ifthenelse{\equal{\SchoolOption}{estg}}{
         \begin{figure}
             \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/IPLeiria-ESTG-Logo-B.pdf}
+            % \includegraphics[width=0.4\linewidth]{Figures/Theme/Logotypes/IPLeiria-ESTG-Logo-Old.png}
         \end{figure}
     }
     
@@ -62,6 +63,13 @@
         }
     }
 
+    \ifthenelse{\equal{\SchoolOption}{utnfrba}}{
+        \begin{figure}
+            \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/UTN-FRBA-Logo-B.pdf}
+        \end{figure}
+        \vspace{-1.8\baselineskip}
+    }
+
     \vspace{3.5\baselineskip}
 
     % Title.
@@ -88,6 +96,8 @@
 
     % Author.
     {\noindent\bfseries\fontsize{14}{19}\selectfont\GetFirstAuthor}
+    
+    {\noindent\itshape\fontsize{10}{10}\selectfont Student No. \GetFirstAuthorNumber}
 
     \ifdefined\GetSecondAuthor
         \vspace{8pt}
@@ -99,7 +109,7 @@
         {\noindent\bfseries\fontsize{14}{19}\selectfont\GetThirdAuthor}
 	\fi
 
-    \vspace{70pt}    
+    \vfill    
 
     {
     \noindent

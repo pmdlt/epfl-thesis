@@ -85,10 +85,18 @@
                 \includegraphics[width=0.35\linewidth]{Figures/Theme/Logotypes/EPFL_Logo_Digital_WHITE_PROD.png}
             }
         }{}
+
+        \ifthenelse{\equal{\SchoolOption}{utnfrba}}{
+            \begin{figure}
+                \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/UTN-FRBA-Logo-W.pdf}
+            \end{figure}
+            \vspace{-1.8\baselineskip}
+        }{}
     } {
         \ifthenelse{\equal{\SchoolOption}{estg}}{
             \begin{figure}
                 \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/IPLeiria-ESTG-Logo-B.pdf}
+                % \includegraphics[width=0.4\linewidth]{Figures/Theme/Logotypes/IPLeiria-ESTG-Logo-Old.png}
             \end{figure}
         }{}
         
@@ -121,6 +129,13 @@
             \makebox[\textwidth][l]{%
                 \includegraphics[width=0.25\linewidth]{Figures/Theme/Logotypes/EPFL_Logo_Digital_BLACK_PROD.png}
             }
+        }{}
+
+        \ifthenelse{\equal{\SchoolOption}{utnfrba}}{
+            \begin{figure}
+                \includegraphics[width=0.485\linewidth]{Figures/Theme/Logotypes/UTN-FRBA-Logo-B.pdf}
+            \end{figure}
+            \vspace{-1.8\baselineskip}
         }{}
     }
 
